@@ -10,5 +10,8 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
   res.send("Backend kører! 🚀");
 });
+const PORT = process.env.PORT || 5000;
 
-app.listen(5000, () => console.log("Server kører på http://localhost:5000"));
+app.listen(PORT, () => {
+  console.log(`Server kører på port ${PORT}`);
+});
